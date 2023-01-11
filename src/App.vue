@@ -66,6 +66,9 @@
                             <li><a href="#">Компания</a></li>
                             <li><a href="#">Команда</a></li>
                             <li><a href="#">Работа</a></li>
+                            <li><a href="https://github.com/Ctfy21/exam_polytech">Ссылка GitHub</a></li>
+                            <li><a href="#">Ссылка FIT</a></li>
+                            <li><a href="/#/json">Ссылка JSON</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
