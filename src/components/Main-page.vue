@@ -5,7 +5,7 @@
         <div class="banner-text">
           <h5>Добро пожаловать в WeatherApp</h5>
           <p class="banner-desc">Это первый в России беслпатный сервис получения погодных показаний. Данный сервис позволяет вам получать открытые данные о погоде со всего мира, а также получать и рассылать их десятками способами. Попробуйте прямо сейчас!</p>
-          <a href="#" class="btn logo-button top-margin">Записаться</a>
+          <a href="#" class="btn logo-button top-margin">Зарегистрироваться</a>
         </div>
       </div>  
     </div>
@@ -50,9 +50,15 @@
             </div>
         </div>
     </section>
+
     <section style="margin-top: 100px;">
     <div>
         <div class="container">
+          <div class="form-group">
+    <label for="exampleFormControlTextarea1">Напишите свой комментарий</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Отправить</button>
+  </div>
             <div class="main-titles-head text-center">
                 <h3 class="header-name ">
                   Комментарии пользователей
@@ -292,5 +298,8 @@ h3.header-name {
 }
 .rating-mini > span.active {
 	color: gold;
+}
+.form-group{
+  width: 100%;
 }
 </style>

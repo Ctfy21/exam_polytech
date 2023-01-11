@@ -36,7 +36,7 @@
                         </button>
                       </li>
                       <li style="display: inline-block; margin-left: 100px;" class="nav-item">
-                        <p style="padding: 0; margin: 0;">Приветствую, Евгений</p>
+                        <p style="padding: 0; margin: 0; color: #fff;">Приветствую, Евгений</p>
                       </li>
                       <li style="display: inline-block;" class="nav-item">
                         <img style="width: 47px; height: 47px;" src="../public/face.jpg" alt="">
