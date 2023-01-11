@@ -11,7 +11,7 @@
     <header class="header">
       <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-light">
-              <h1><a class="navbar-brand " href="index.html">
+              <h1><a class="navbar-brand " href="/#/">
                       Yoga
                   </a></h1>
               <button class="navbar-toggler bg-gradient" type="button" aria-expanded="false" >
@@ -21,21 +21,21 @@
               <div class="collapse navbar-collapse jus" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item ">
-                          <a class="nav-link" href="index.html">Home</a>
+                          <a class="nav-link" href="/#/">Home</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="about.html">About</a>
+                          <a class="nav-link" href="#">About</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="services.html">Services</a>
+                          <a class="nav-link" href="#">Services</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="contact.html">Contact</a>
+                          <a class="nav-link" href="#">Contact</a>
                       </li>
                       <li class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-primary">
-                          <i class="fas fa-search"><img src="./assets/like.png" width="30px" height="30px" alt=""></i>
+                         <img src="./assets/like.png" width="30px" height="30px" alt="">
                         </button>
                       </li>
                   </ul>
@@ -44,6 +44,7 @@
       </div>
   </header>
   <main>
+    <router-view></router-view>
   </main>
   <footer>
     <div class="footer-dark">
