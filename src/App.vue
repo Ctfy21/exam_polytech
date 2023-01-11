@@ -30,10 +30,16 @@
                           <a class="nav-link" href="#">Контакты</a>
                       </li>
                       <li class="input-group rounded">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" />
                         <button type="button" class="btn btn-primary">
-                         <img src="../public/search.png" width="30px" height="30px" alt="">
+                         <img style="width: 35px; height: 35px;" src="../public/search.png" alt="search icon">
                         </button>
+                      </li>
+                      <li style="display: inline-block; margin-left: 100px;" class="nav-item">
+                        <p style="padding: 0; margin: 0;">Приветствую, Евгений</p>
+                      </li>
+                      <li style="display: inline-block;" class="nav-item">
+                        <img style="width: 47px; height: 47px;" src="../public/face.jpg" alt="">
                       </li>
                   </ul>
               </div>

@@ -8,13 +8,11 @@
       <title>examPolytech</title>
     </head>
     <section>
-    </section>
-    <section>
         <div class="div-sort">
             <button v-on:click="sortLatigue" class="btn-sort">Сортировка по долготе</button>
             <button v-on:click="sortAlphabet" class="btn-sort">Сортировка по алфавиту</button>
             <div class="input-group rounded btn-sort">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" v-model="typeCity"/>
             </div>
         </div>
         <div v-for="city in localWeatherData" :key="city.location.lat" class="widget">
@@ -43,6 +41,7 @@
     data(){
             return{
                 localWeatherData: [],
+                typeCity: ""
             };
         },
         components:{

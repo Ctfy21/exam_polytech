@@ -1,5 +1,5 @@
 <template>
-  <section class="">
+  <section>
   <div class="slide text-center header11">
     <div class="container">
         <div class="banner-text">
@@ -34,17 +34,17 @@
                       <h2>Регистрируйся прямо сейчас</h2>
                   <div class="form-group">
                   <label for="InputEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+                  <input type="email" class="form-control" id="InputEmail1" placeholder="Введите email">
                 </div>
                 <div class="form-group">
                   <label for="InputPhone1">Номер телефона</label>
-                  <input type="phone" class="form-control" id="InputPhone1" aria-describedby="phoneHelp" placeholder="Введите номер телефона">
+                  <input type="phone" class="form-control" id="InputPhone1" placeholder="Введите номер телефона">
                 </div>
                 <div class="form-group">
                   <label for="InputPassword1">Пароль</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+                  <input type="password" class="form-control" id="InputPassword1" placeholder="Введите пароль">
                 </div>
-                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                     </form>
                 </div>
             </div>
