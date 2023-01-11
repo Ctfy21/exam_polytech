@@ -1,0 +1,11 @@
+import { createRouter, createWebHashHistory } from 'vue-router';
+import main from './components/Main-page.vue'
+import weatherCity from './components/Weather-page.vue'
+
+export default createRouter({
+    history: createWebHashHistory(),
+    routes: [ 
+        {path: '/', component: main},
+        {path: '/weather', component: weatherCity},
+    ]
+})
