@@ -11,18 +11,17 @@
     <header class="header">
       <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-light">
-              <h1><a class="navbar-brand " href="index.html"><img src="assets/images/golf.png" alt="" class="img-responsive logo-logo">
+              <h1><a class="navbar-brand " href="index.html">
                       Yoga
                   </a></h1>
-              <button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse" data-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler bg-gradient" type="button" aria-expanded="false" >
                   <span class="navbar-toggler-icon"></span>
               </button>
 
               <div class="collapse navbar-collapse jus" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item ">
-                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="index.html">Home</a>
                       </li>
                       <li class="nav-item ">
                           <a class="nav-link" href="about.html">About</a>
@@ -38,20 +37,29 @@
             </nav>
       </div>
   </header>
+  <main>
+    <MainPage></MainPage>
+  </main>
   </body>
   </html>
 </template>
 
 <script>
+import MainPage from "./components/Main-page.vue";
 export default {
-
+  components: {
+    MainPage
+  }
 }
+
+
+
 </script>
 
 <style>
 .header {
   padding: 15px 0px 15px;
-  background: #7ba010;
+  background: #4682B4;
   border-bottom: none; }
 
 .navbar {
@@ -88,4 +96,5 @@ div#navbarNav {
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   color: #fff; }
+
 </style>
