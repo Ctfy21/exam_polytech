@@ -3,67 +3,26 @@
   <div class="slide text-center header11">
     <div class="container">
         <div class="banner-text">
-          <h5>Welcome to Yoga</h5>
-          <p class="banner-desc">Adipi sicing elit. Quia, aliquid odioexplicabo voluptatum corporis Dicta, provident! Rem adip isci conse ctetur adipi sicing elit. Deleniti possimus culpa nemo asperiores aperiam mollitia, maiores Lorem ipsum dolor.</p>
-          <a href="contact.html" class="btn logo-button top-margin">Записаться</a>
+          <h5>Добро пожаловать в WeatherApp</h5>
+          <p class="banner-desc">Это первый в России беслпатный сервис получения погодных показаний. Данный сервис позволяет вам получать открытые данные о погоде со всего мира, а также получать и рассылать их десятками способами. Попробуйте прямо сейчас!</p>
+          <a href="#" class="btn logo-button top-margin">Записаться</a>
         </div>
       </div>  
     </div>
   </section>
-  <section class="">
+  <section>
     <div class="specification-layout ">
         <div class="container">
-            <div class="specification-effect row">
-                    <div class="col">
-                        <img class="icon" src="../assets/like.png" alt="like">  
+            <div class="specification-effect row" >
+                    <div class="col" v-for="advantage in this.$store.state.advantages[0]" :key="advantage.id">
+                        <img class="icon" v-bind:src="advantage.logo" alt="like">  
                         <div class="back-color ">
                           <span class="fa fa-thumbs-up" aria-hidden="true"></span>
-                          <h4>Best practice</h4>
-                          <p class="para ">Cumque asperiores ab quasi laboriosam omnis tempor econs ectetur elit.optio illum officiis itaque
-                              soluta impedit </p>
+                          <h4>{{ advantage.name }}</h4>
+                          <p class="para ">{{ advantage.description }} </p>
                         </div>
                     </div>
-                <div class="col">
-                    <div class="back-color ">
-                    <span class="fa fa-diamond" aria-hidden="true"></span>
-                    <h4><a href="about.html" class="title-head ">Popular Courses</a></h4>
-                    <p class="para ">Cumque asperiores ab quasi laboriosam omnis tempo recons ectetur elit.optio illum officiis itaque
-                        soluta impedit </p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="back-color ">
-                    <span class="fa fa-flag" aria-hidden="true"></span>
-                    <h4><a href="about.html" class="title-head  ">Training Area</a></h4>
-                    <p class="para ">Cumque asperiores ab quasi laboriosam omnis tempo recons ectetur elit.optio illum officiis itaque
-                        soluta impedit</p>
-                </div>
             </div>
-                <div class="col">
-                    <div class="back-color ">
-                    <span class="fa fa-user" aria-hidden="true"></span>
-                    <h4><a href="about.html" class="title-head ">Certified Experts</a></h4>
-                    <p class="para ">Cumque asperiores ab quasi laboriosam omnis tempor econs ectetur elit.optio illum officiis itaque
-                        soluta impedit </p>
-                </div>
-            </div>
-                <div class="col">
-                    <div class="back-color ">
-                    <span class="fa fa-superpowers" aria-hidden="true"></span>
-                    <h4><a href="about.html" class="title-head ">Best Horses</a></h4>
-                    <p class="para ">Cumque asperiores ab quasi laboriosam omnis tempo recons ectetur elit.optio illum officiis itaque
-                        soluta impedit </p>
-                </div>
-            </div>
-                <div class="col">
-                    <div class="back-color">
-                    <span class="fa fa-handshake-o" aria-hidden="true"></span>
-                    <h4><a href="about.html" class="title-head"> Supports</a></h4>
-                    <p class="para">Cumque asperiores ab quasi laboriosam omnis tempo recons ectetur elit.optio illum officiis itaque
-                        soluta impedit  </p>
-                </div>
-            </div>
-        </div>
         </div>
     </div>
 </section>
@@ -74,42 +33,38 @@
                     <form class="main-cover text-center">
                       <h2>Регистрируйся прямо сейчас</h2>
                   <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <label for="InputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <label for="InputPhone1">Номер телефона</label>
+                  <input type="phone" class="form-control" id="InputPhone1" aria-describedby="phoneHelp" placeholder="Введите номер телефона">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label for="InputPassword1">Пароль</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Отправить</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <section class="">
-    <div class="">
+    <section style="margin-top: 100px;">
+    <div>
         <div class="container">
             <div class="main-titles-head text-center">
                 <h3 class="header-name ">
-                  Meet Our Players
+                  Комментарии пользователей
                 </h3>
-                <p class="tiltle-para  ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.laboriosam maiores ullam ut dolor eaque incidunt in fugiat delectus eumest Porro, ipsam Alias.</p>
+                <p class="tiltle-para  ">Прочитайте комментарии счастливых пользователей нашего сервиса.</p>
             </div>
-            <!-- main-slider -->
-            <div class="row">
-                <div class="col padding-commentary">
-                    <div class=" hh14-info  ">
-                     
-                        <p class="para ">Consectetur adipisicing Lorem ipsum dolor sit amet,elit, sed do
-                            eiusmod tempor incididunt ut labore 
-                            minim.</p>
-                        <h4 class="mb-3 ">Jack Willson</h4>
-                        <img src="../assets/c1.jpg" width="35px" height="35px" alt="product" class="img-responsive ">
+            <div class="row" >
+                <div class="col padding-commentary" v-for="commentary in this.$store.state.commentary[0]" :key="commentary.id">
+                    <div class=" hh14-info">
+                      <h4 class="mb-3 ">{{commentary.name}}</h4>
+                        <p class="para ">{{commentary.description}}</p>
+                        <img style="width: 35px;" v-bind:src="commentary.logo" alt="product" class="img-responsive">
                         <div style="margin-left: 15px;" class="rating-mini">
                           <span class="active"></span>	
                           <span class="active"></span>    
@@ -119,49 +74,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="col padding-commentary">
-                    <div class=" hh14-info ">
-                    
-                        <p class="para  ">Consectetur adipisicing Lorem ipsum dolor sit amet,elit, sed do
-                            eiusmod tempor incididunt ut labore 
-                            minim.</p>
-                        <h4 class="mb-3 ">Lily maxson</h4>
-                        <img src="../assets/c1.jpg" width="35px" height="35px" alt="product" class="img-responsive ">
-                        <div style="margin-left: 15px;" class="rating-mini">
-                          <span class="active"></span>	
-                          <span class="active"></span>    
-                          <span class="active"></span>  
-                          <span></span>    
-                          <span></span>
-                        </div>
-                    </div>
-                </div>
-                    <div class="col padding-commentary">
-                        <div class=" hh14-info ">
-                        
-                            <p class="para ">Consectetur adipisicing Lorem ipsum dolor sit amet,elit, sed do
-                                eiusmod tempor incididunt ut labore 
-                                minim.</p>
-                            <h4 class="mb-3 ">Nike samson</h4>
-                            <img src="../assets/c1.jpg" width="35px" height="35px" alt="product" class="img-responsive ">
-                            <div style="margin-left: 15px;" class="rating-mini">
-                              <span class="active"></span>	
-                              <span class="active"></span>    
-                              <span class="active"></span>  
-                              <span></span>    
-                              <span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </div>
     </div>
 </section>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
-
+  data(){
+            return{
+            };
+        },
+        components:{
+            
+        },
+        methods:{
+            ...mapActions([
+                'GET_COMMENTARIES_FROM_JSON',
+                'GET_ADVANTAGES_FROM_JSON'
+            ]),
+        },
+        created(){
+            this.GET_COMMENTARIES_FROM_JSON();
+            this.GET_ADVANTAGES_FROM_JSON();
+        }
 }
 </script>
 
@@ -177,7 +115,7 @@ a{
   margin: 0px;
 }
 .slide {
-    background: url(../assets/check.png) no-repeat center;
+    background: url(../assets/sunset.jpeg) no-repeat center;
     background-size: cover;
     min-height: 650px;
     z-index: 0;
@@ -187,7 +125,7 @@ a{
 .slide:before {
     width: 100%;
     content: "";
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -195,7 +133,7 @@ a{
     z-index: -1;
 }
 .slideForm{
-  background: url(../assets/water.jpg) no-repeat center;
+  background: url(../assets/meteo.jpg) no-repeat center;
   background-size: cover;
   min-height: 650px;
   z-index: 0;
@@ -250,6 +188,10 @@ a.logo-button {
     font-weight: 600;
     text-decoration: none;
     outline: none;
+}
+a.logo-button:hover{
+  color: orange;
+  border-color: orange;
 }
 .banner-text{
   padding: 15px;

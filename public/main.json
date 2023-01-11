@@ -1,0 +1,65 @@
+{
+    "advantages": 
+    [
+            {
+                "id": 1,
+                "logo":"like.png",
+                "name": "Долгая поддержка",
+                "description": "123123"
+            },
+            {
+                "id": 2,
+                "logo":"search.png",
+                "name": "Высокоточное оборудование",
+                "description": "111"
+            },
+            {
+                "id": 3,
+                "logo":"like.png",
+                "name": "Несколько лет на рынке",
+                "description": "123"
+            },
+            {
+                "id": 4,
+                "logo":"search.png",
+                "name": "Активное комьюнити",
+                "description": "111"
+            },
+            {
+                "id": 5,
+                "logo":"like.png",
+                "name": "Большой выбор данных",
+                "description": "111"
+            },
+            {
+                "id": 6,
+                "logo":"search.png",
+                "name": "Нативно понятно",
+                "description": "111"
+            }
+    ],
+    "commentary":
+    [
+        {
+            "id": 1,
+            "logo":"face.jpg",
+            "name": "Джереми Кларксон",
+            "description": "Наконец-то кто-то это сделал",
+            "stars": 5
+        },
+        {
+            "id": 2,
+            "logo":"face.jpg",
+            "name": "Большой Лебовски",
+            "description": "Спасибо большое за такую подробную карту",
+            "stars": 4
+        },
+        {
+            "id": 3,
+            "logo":"face.jpg",
+            "name": "Меган Фокс",
+            "description": "Как же прекрасно",
+            "stars": 5
+        }
+    ]
+}

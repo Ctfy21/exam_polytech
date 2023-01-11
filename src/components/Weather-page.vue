@@ -13,6 +13,9 @@
         <div class="div-sort">
             <button v-on:click="sortLatigue" class="btn-sort">Сортировка по долготе</button>
             <button v-on:click="sortAlphabet" class="btn-sort">Сортировка по алфавиту</button>
+            <div class="input-group rounded btn-sort">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            </div>
         </div>
         <div v-for="city in localWeatherData" :key="city.location.lat" class="widget">
             <div class="left-panel panel">
@@ -39,7 +42,7 @@
   export default {
     data(){
             return{
-                localWeatherData: []
+                localWeatherData: [],
             };
         },
         components:{
@@ -146,6 +149,7 @@ div.right-panel
   
 }
 .btn-sort{
+    align-self: center;
     margin-top: 20px;
     border-radius: 5px;
     background-color: white;
@@ -154,6 +158,7 @@ div.right-panel
     background-color: black;
 }
 .div-sort{
+
   width: 150px;
   margin: 50px auto;
 }

@@ -21,21 +21,18 @@
               <div class="collapse navbar-collapse jus" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item ">
-                          <a class="nav-link" href="/#/">Home</a>
+                          <a class="nav-link" href="/#/">Главная</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="#">About</a>
+                          <a class="nav-link" href="/#/weather">Сервисы</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="/#/weather">Services</a>
-                      </li>
-                      <li class="nav-item ">
-                          <a class="nav-link" href="#">Contact</a>
+                          <a class="nav-link" href="#">Контакты</a>
                       </li>
                       <li class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-primary">
-                         <img src="./assets/like.png" width="30px" height="30px" alt="">
+                         <img src="../public/search.png" width="30px" height="30px" alt="">
                         </button>
                       </li>
                   </ul>
@@ -51,24 +48,23 @@
             <div class="container">
                 <div class="rowFooter">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
+                        <h3>Сервисы</h3>
                         <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="#">Прогноз</a></li>
+                            <li><a href="#">UV-карта</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
+                        <h3>О нас</h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Компания</a></li>
+                            <li><a href="#">Команда</a></li>
+                            <li><a href="#">Работа</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        <h3>WeatherApp</h3>
+                        <p>Данный сайт имеет такое авторское право, которое позволяет просматривать и пользоваться этим сайтом только его создателю.</p>
                     </div>
                 </div>
 
@@ -132,7 +128,7 @@ div#navbarNav {
   color: #fff; 
 }
 .navbar-nav > li{
-  margin-right: 9px;
+  margin-right: 12px;
 }
 
 .footer-dark {

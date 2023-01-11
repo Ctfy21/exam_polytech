@@ -3,6 +3,8 @@ import axios from 'axios'
 
 export default new Vuex.Store({
     actions: {
+
+
        GET_PRODUCTS_FROM_API({commit}){
         if(!this.state.loaded){
         return axios.all([
@@ -22,20 +24,59 @@ export default new Vuex.Store({
             this.state.loaded = 1;
         }));
         }
-       }
+       },
+
+       GET_COMMENTARIES_FROM_JSON({commit}){
+        if(!this.state.loadedComm){
+            return axios.get('main.json',{
+                method: "GET"
+            })
+            .then((commentary) => {
+                commit('SET_COMMENTARIES_TO_STATE', commentary.data.commentary);
+            })
+        }
+       },
+
+       GET_ADVANTAGES_FROM_JSON({commit}){
+        if(!this.state.loadedAdv){
+            return axios.get('main.json',{
+                method: "GET"
+            })
+            .then((commentary) => {
+                commit('SET_ADVANTAGES_TO_STATE', commentary.data.advantages);
+            })
+        }
+   }
+
     },
     mutations: {
       SET_WEATHER_TO_STATE: (state, weather)=> {
         state.weatherData.push(weather);
+      },
+      SET_COMMENTARIES_TO_STATE: (state, commentary)=> {
+        state.commentary.push(commentary);
+      },
+      SET_ADVANTAGES_TO_STATE: (state, advantages)=> {
+        state.advantages.push(advantages);
       }
     },
     state: {
         weatherData: [],
-        loaded: 0
+        advantages: [],
+        commentary: [],
+        loaded: 0,
+        loadedComm: 0,
+        loadedAdv: 0
     },
     getters: {
         get_weatherData(state){
             return state.weatherData;
+        },
+        get_commentaryData(state){
+            return state.commentary;
+        },
+        get_advantagesData(state){
+            return state.advantages;
         }
     }
 })
