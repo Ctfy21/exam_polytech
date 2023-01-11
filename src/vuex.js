@@ -4,13 +4,13 @@ import axios from 'axios'
 export default new Vuex.Store({
     actions: {
        GET_PRODUCTS_FROM_API({commit}){
-
+        if(!this.state.loaded){
         return axios.all([
-            axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=London&days=1&aqi=no&alerts=no'), 
+            axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=Warsaw&days=1&aqi=no&alerts=no'), 
             axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=Moscow&days=1&aqi=no&alerts=no'),
             axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=Mumbai&days=1&aqi=no&alerts=no'),
             axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=Paphos&days=1&aqi=no&alerts=no'),
-            axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=Warsaw&days=1&aqi=no&alerts=no')
+            axios.get('http://api.weatherapi.com/v1/forecast.json?key=61474f755d8241a1b77104047231101&q=London&days=1&aqi=no&alerts=no')
 
           ])
         .then(axios.spread((data1, data2, data3, data4, data5) => {
@@ -19,8 +19,9 @@ export default new Vuex.Store({
             commit('SET_WEATHER_TO_STATE', data3.data);
             commit('SET_WEATHER_TO_STATE', data4.data);
             commit('SET_WEATHER_TO_STATE', data5.data);
+            this.state.loaded = 1;
         }));
-
+        }
        }
     },
     mutations: {
@@ -29,7 +30,8 @@ export default new Vuex.Store({
       }
     },
     state: {
-        weatherData: []
+        weatherData: [],
+        loaded: 0
     },
     getters: {
         get_weatherData(state){

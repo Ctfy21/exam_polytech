@@ -7,8 +7,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>examPolytech</title>
     </head>
-    <section v-for="city in this.$store.state.weatherData" :key="city.location.lat">
-        <div class="widget">
+    <section>
+    </section>
+    <section>
+        <div class="div-sort">
+            <button v-on:click="sortLatigue" class="btn-sort">Сортировка по долготе</button>
+            <button v-on:click="sortAlphabet" class="btn-sort">Сортировка по алфавиту</button>
+        </div>
+        <div v-for="city in localWeatherData" :key="city.location.lat" class="widget">
             <div class="left-panel panel">
                 <div class="date">
                     {{city.location.localtime}}
@@ -33,7 +39,7 @@
   export default {
     data(){
             return{
-                weatherData: []
+                localWeatherData: []
             };
         },
         components:{
@@ -42,10 +48,28 @@
         methods:{
             ...mapActions([
                 'GET_PRODUCTS_FROM_API'
-            ])
+            ]),
+
+            sortAlphabet(){
+                this.localWeatherData.sort(function(a, b) {
+                    var textA = a.location.name.toUpperCase();
+                    var textB = b.location.name.toUpperCase();
+                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                });
+            },
+            sortLatigue(){
+                this.localWeatherData.sort(function(a, b) {
+                    var latA = a.location.lat;
+                    var latB = b.location.lat;
+                    return (latA < latB) ? -1 : (latA > latB) ? 1 : 0;
+                });
+            }
+
+
         },
         created(){
             this.GET_PRODUCTS_FROM_API()
+            this.localWeatherData = this.$store.state.weatherData;
         }
   }
   
@@ -62,7 +86,7 @@ div.widget
 {
   position: relative;
   width: 400px;
-  margin: 150px auto;
+  margin: 80px auto;
   background-color: #fcfdfd;
   border-radius: 9px;
   padding: 25px;
@@ -120,6 +144,18 @@ div.right-panel
 {
   width: 135px;
   
+}
+.btn-sort{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+.btn-sort:active{
+    background-color: black;
+}
+.div-sort{
+  width: 150px;
+  margin: 50px auto;
 }
   </style>
   

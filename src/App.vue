@@ -11,8 +11,8 @@
     <header class="header">
       <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-light">
-              <h1><a class="navbar-brand " href="/#/">
-                      Yoga
+              <h1><a class="navbar-bran" href="/#/">
+                      WeatherApp
                   </a></h1>
               <button class="navbar-toggler bg-gradient" type="button" aria-expanded="false" >
                   <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
                           <a class="nav-link" href="#">About</a>
                       </li>
                       <li class="nav-item ">
-                          <a class="nav-link" href="#">Services</a>
+                          <a class="nav-link" href="/#/weather">Services</a>
                       </li>
                       <li class="nav-item ">
                           <a class="nav-link" href="#">Contact</a>
@@ -96,7 +96,7 @@ export default {
 .navbar {
   padding: 0; }
 
-.navbar .navbar-brand {
+.navbar .navbar-bran{
   font-size: 27px;
   color: #fff;
   text-transform: uppercase;
@@ -110,6 +110,9 @@ export default {
   align-items: center;
   grid-gap: 5px; }
 
+.navbar-bran:hover{
+  color:orange
+}
 div#navbarNav {
   margin-left: 20px;
   margin-top: 5px; }
